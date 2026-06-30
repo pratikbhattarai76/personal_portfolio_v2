@@ -163,37 +163,37 @@
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <a href="#">
-                        <img src="assets/portfolio-project.png" class="w-full aspect-video object-cover rounded-lg border">
+                        <img src="assets/portfolio-project.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
                         <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Portfolio Application</h5>
                         <p class="text-gray-600 text-m">This is Astro based portfolio application which is dockerized and deployed in my self hosted server.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/malaideu-project.png" class="w-full aspect-video object-cover rounded-lg border">
+                        <img src="assets/malaideu-project.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
                         <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">MalaiDeu - AWS File Storage Platform</h5>
                         <p class="text-gray-600 text-m">This is a file upload platform which was deployed in AWS, but now not in service.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/kubernetes-homelab.png" class="w-full aspect-video object-cover rounded-lg border">
+                        <img src="assets/kubernetes-homelab.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
                         <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Kubernetes Homelab</h5>
                         <p class="text-gray-600 text-m">This is my one node kubernetes server for hosting services. Due to limited hardware, it is not in use currently.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/docker-homelab.png" class="w-full aspect-video object-cover rounded-lg border">
+                        <img src="assets/docker-homelab.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
                         <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Docker Homelab</h5>
                         <p class="text-gray-600 text-m">This is my currently running docker server where various services and applications are deployed.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/instagram-clone.png" class="w-full aspect-video object-cover rounded-lg border">
+                        <img src="assets/instagram-clone.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
                         <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Instagram Clone</h5>
                         <p class="text-gray-600 text-m">This is a simple HTML, CSS clone of my personal instagram.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/personal-intro.png" class="w-full aspect-video object-cover rounded-lg border">
+                        <img src="assets/personal-intro.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
                         <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Personal Introduction</h5>
                         <p class="text-gray-600 text-m">This is a simple HTML, CSS based personal introduction of mine.</p>
                     </a>
@@ -203,27 +203,29 @@
 
 
         <!-- Contact Section -->
-        <section>
-            <div>
+        <section class="bg-gray-100">
+            <div class="my-container sections-pb">
                 <h3 class="text-4xl text-neutral-800">Contact Me</h3>
 
                 <form>
-                    <div>
-                        <input type="text" name="name" placeholder="Name" autocomplete="off">
-                        <input type="number" name="name" placeholder="Number">
+                    <div class="flex mt-7 gap-10">
+                        <input type="text" name="name" placeholder="Name" autocomplete="off" class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
+                        <input type="number" name="name" placeholder="Phone Number" class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm" >
                     </div>
 
-                    <div>
-                        <input type="email" name="email" placeholder="Email" autocomplete="off">
-                        <input type="text" name="subject" placeholder="Subject">
+                    <div class="flex mt-7 gap-10">
+
+                        <input type="email" name="email" placeholder="Email" autocomplete="off" class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
+                        <input type="text" name="subject" placeholder="Subject" class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
                     </div>
 
-                    <div>
-                        <textarea name="message" placeholder="Message"></textarea>
+                    <div class="mt-7">
+                        <textarea name="message" placeholder="Message" class="field resize-none w-full h-32 border-b-2 border-gray-500 placeholder-gray-500 text-sm"></textarea>
                     </div>
 
-                    <div>
-                        <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Send Message</a>
+                    <div class="mt-7 flex gap-4 justify-end">
+                        <button type="reset" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Reset</button>  
+                        <button type="submit" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Send Message</button>  
                     </div>
                 </form>
             </div>
