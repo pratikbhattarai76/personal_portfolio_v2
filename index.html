@@ -8,18 +8,19 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navbar Section -->
-    <header>
-        <nav>
+    <header class="fixed top-0 left-0 right-0">
+        <nav class="flex justify-between items-center my-container h-24 text-white">
             <!-- Logo -->
-            <a href="#">Pratik.</a>
+            <a href="#" class="logo text-3xl font-bold">Pratik.</a>
 
             <!-- Menu -->
-
-            <ul>
+            <ul class="md:flex uppercase gap-16 text-[16px] hidden">
                 <li>
                     <a href="#home">Home</a>
                 </li>
@@ -42,19 +43,19 @@
             </ul>
 
             <!-- Hamburger Menu -->
-            <a href="#">
+            <a href="#" class="text-2xl md:hidden">
                 <i class="fa-solid fa-bars"></i>
             </a>
         </nav>
 
     </header>
-    <!-- Main Section -->
 
+    <!-- Main Section -->
     <main>
         <!-- Hero -->
-        <section>
-            <div>
-                <h1>Developer</h1>
+        <section class="flex items-center justify-center bg-[url(/assets/iamgroot.jpg)] bg-cover bg-center h-screen">
+            <div class="my-container">
+                <h1 class="text-8xl text-white font-semibold tracking-tighter">Developer</h1>
 
                 <!-- Socials -->
                 <ul>
