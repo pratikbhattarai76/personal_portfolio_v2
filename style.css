@@ -15,9 +15,9 @@
 }
 
 .sections-pb{
-    padding-block: 7.5rem;
+    padding-block: 4rem;
 }
 
-.logo,h2{
+.logo,h2,h3{
     font-family: "Kaushan Script", cursive;
 }
