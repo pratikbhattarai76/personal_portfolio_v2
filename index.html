@@ -9,85 +9,105 @@
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://unpkg.com/typed.js@3.0.0/dist/typed.umd.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Navbar Section -->
-    <header class="fixed top-0 left-0 right-0 z-10">
-        <nav class="flex justify-between items-center my-container h-24 text-white">
+    <header id="navbar" class="fixed top-0 left-0 right-0 z-10 text-white">
+        <nav class="flex justify-between items-center my-container h-24 ">
             <!-- Logo -->
             <a href="#" class="logo text-3xl font-bold">Pratik.</a>
 
             <!-- Menu -->
             <ul class="md:flex uppercase gap-16 text-[16px] hidden">
                 <li>
-                    <a href="#home">Home</a>
+                    <a href="#home" class="hover:text-yellow-400">Home</a>
                 </li>
 
                 <li>
-                    <a href="#about">About</a>
+                    <a href="#about" class="hover:text-yellow-400">About</a>
                 </li>
 
                 <li>
-                    <a href="#whatido">What I Do</a>
+                    <a href="#whatido" class="hover:text-yellow-400">What I Do</a>
                 </li>
 
                 <li>
-                    <a href="#works">Works</a>
+                    <a href="#works" class="hover:text-yellow-400">Works</a>
                 </li>
 
                 <li>
-                    <a href="#contact">Contact</a>
+                    <a href="#contact" class="hover:text-yellow-400">Contact</a>
                 </li>
             </ul>
 
             <!-- Hamburger Menu -->
-            <a href="#" class="text-2xl md:hidden">
+            <a href="#" id="burger" class="text-2xl md:hidden">
                 <i class="fa-solid fa-bars"></i>
             </a>
         </nav>
 
     </header>
 
+    <!-- Mobile Menu -->
+    <ul id="menu" class="flex flex-col uppercase gap-8 text-[16px] md:hidden absolute items-center justify-center left-0 top-0 bottom-0 bg-white w-60 -translate-x-full transition-transform duration-300">
+        <li>
+            <a href="#home" class="hover:text-yellow-400">Home</a>
+        </li>
+
+        <li>
+            <a href="#about" class="hover:text-yellow-400">About</a>
+        </li>
+
+        <li>
+            <a href="#whatido" class="hover:text-yellow-400">What I Do</a>
+        </li>
+
+        <li>
+            <a href="#works" class="hover:text-yellow-400">Works</a>
+        </li>
+
+        <li>
+            <a href="#contact" class="hover:text-yellow-400">Contact</a>
+        </li>
+    </ul>
+
+
     <!-- Main Section -->
     <main>
         <!-- Hero -->
-        <section class="flex items-center justify-center bg-[url(/assets/iamgroot.jpg)] bg-cover bg-center h-screen">
+        <section id="home"
+            class="flex items-center justify-center bg-[url(/assets/iamgroot.jpg)] bg-cover bg-center h-screen">
             <div class="my-container">
-                <h1 class="text-7xl md:text-8xl text-white font-semibold tracking-tighter h-30">Developer</h1>
+                <h1 id="typing" class="text-7xl md:text-8xl text-white font-semibold tracking-tighter h-20 md:h-28"></h1>
 
                 <!-- Socials -->
                 <ul class="flex items-center justify-center gap-8 text-white text-2xl">
+                    
                     <li>
-                        <a href="#" class="hover:text-gray-300">
-                            <i class="fa-brands fa-facebook"></i>
-                        </a>
-                    </li>
-
-                    <li>
-                        <a href="#" class="hover:text-gray-300">
+                        <a href="https://github.com/pratikbhattarai76" target="_blank" rel="noreferrer" class="hover:text-gray-300">
                             <i class="fa-brands fa-github"></i>
                         </a>
                     </li>
-
+                    
                     <li>
-                        <a href="#" class="hover:text-gray-300">
+                        <a href="www.linkedin.com/in/pratik-bhattarai-01896a255" target="_blank" rel="noreferrer" class="hover:text-gray-300">
                             <i class="fa-brands fa-linkedin"></i>
                         </a>
                     </li>
-
+                    
                     <li>
-                        <a href="#" class="hover:text-gray-300">
+                        <a href="https://discord.com/users/760901197166018621" target="_blank" rel="noreferrer" class="hover:text-gray-300">
                             <i class="fa-brands fa-discord"></i>
                         </a>
-                    </li>
                 </ul>
             </div>
         </section>
 
         <!-- About Section -->
-        <section>
+        <section id="about">
             <div class="my-container sections-pb flex md:flex-row flex-col items-center gap-10">
                 <img src="assets/hero-image.jpg" class="w-full md:w-1/3">
                 <div>
@@ -100,56 +120,70 @@
                         maintaining web applications. Besides those, I'm pretty good at singing I'd say. (Cocky.jpg)
                     </p>
 
-                    <a href="#" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Download Resume</a>
+                    <a href="#"
+                        class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Download
+                        Resume</a>
                 </div>
             </div>
         </section>
 
         <!-- What I Do Section -->
-        <section class="bg-gray-100">
+        <section id="whatido" class="bg-gray-100">
             <div class="my-container sections-pb">
                 <h3 class="text-4xl text-neutral-800">What I Do</h3>
 
                 <div class="grid gap-14 md:grid-cols-3 mt-7">
                     <div>
                         <i class="fa-solid fa-layer-group text-4xl text-yellow-400"></i>
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">UI/UX Design</h5>
-                        <p class="text-gray-600 text-m">I design clean, modern, and user-friendly interfaces that focus on usability, accessibility,
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">UI/UX Design
+                        </h5>
+                        <p class="text-gray-600 text-m">I design clean, modern, and user-friendly interfaces that focus
+                            on usability, accessibility,
                             and creating enjoyable user experiences.</p>
                     </div>
 
                     <div>
                         <i class="fa-solid fa-laptop text-4xl text-yellow-400"></i>
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Frontend Development</h5>
-                        <p class="text-gray-600 text-m">I build responsive and interactive web applications using React, Tailwind CSS, and modern
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Frontend
+                            Development</h5>
+                        <p class="text-gray-600 text-m">I build responsive and interactive web applications using React,
+                            Tailwind CSS, and modern
                             JavaScript, with a focus on performance and clean code.</p>
                     </div>
 
                     <div>
                         <i class="fa-solid fa-code text-4xl text-yellow-400"></i>
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Backend Development</h5>
-                        <p class="text-gray-600 text-m">I develop scalable backend services and REST APIs using Node.js, Express, and MongoDB to
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Backend
+                            Development</h5>
+                        <p class="text-gray-600 text-m">I develop scalable backend services and REST APIs using Node.js,
+                            Express, and MongoDB to
                             power modern web applications.</p>
                     </div>
 
                     <div>
                         <i class="fa-solid fa-cloud text-4xl text-yellow-400"></i>
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Cloud & Deployment</h5>
-                        <p class="text-gray-600 text-m">I deploy applications using Docker, GitHub Actions, Nginx, and cloud platforms while learning
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Cloud &
+                            Deployment</h5>
+                        <p class="text-gray-600 text-m">I deploy applications using Docker, GitHub Actions, Nginx, and
+                            cloud platforms while learning
                             modern DevOps practices and CI/CD workflows.</p>
                     </div>
 
                     <div>
                         <i class="fa-solid fa-server text-4xl text-yellow-400"></i>
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Server Management</h5>
-                        <p class="text-gray-600 text-m">I configure and manage Linux servers, web servers, domains, SSL certificates, and hosting
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Server
+                            Management</h5>
+                        <p class="text-gray-600 text-m">I configure and manage Linux servers, web servers, domains, SSL
+                            certificates, and hosting
                             environments to keep applications running smoothly.</p>
                     </div>
 
                     <div>
                         <i class="fa-solid fa-rocket text-4xl text-yellow-400"></i>
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Performance & Optimization</h5>
-                        <p class="text-gray-600 text-m"> I optimize websites for speed, responsiveness, SEO, and accessibility to deliver a better
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Performance &
+                            Optimization</h5>
+                        <p class="text-gray-600 text-m"> I optimize websites for speed, responsiveness, SEO, and
+                            accessibility to deliver a better
                             experience across all devices.</p>
                     </div>
                 </div>
@@ -157,45 +191,62 @@
         </section>
 
         <!-- Recent Works Section -->
-        <section>
+        <section id="works">
             <div class="my-container sections-pb">
                 <h3 class="text-4xl text-neutral-800 mb-6">Recent Works</h3>
 
                 <div class="grid md:grid-cols-2 gap-6">
                     <a href="#">
-                        <img src="assets/portfolio-project.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Portfolio Application</h5>
-                        <p class="text-gray-600 text-m">This is Astro based portfolio application which is dockerized and deployed in my self hosted server.</p>
+                        <img src="assets/portfolio-project.png"
+                            class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Portfolio
+                            Application</h5>
+                        <p class="text-gray-600 text-m">This is Astro based portfolio application which is dockerized
+                            and deployed in my self hosted server.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/malaideu-project.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">MalaiDeu - AWS File Storage Platform</h5>
-                        <p class="text-gray-600 text-m">This is a file upload platform which was deployed in AWS, but now not in service.</p>
+                        <img src="assets/malaideu-project.png"
+                            class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">MalaiDeu - AWS
+                            File Storage Platform</h5>
+                        <p class="text-gray-600 text-m">This is a file upload platform which was deployed in AWS, but
+                            now not in service.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/kubernetes-homelab.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Kubernetes Homelab</h5>
-                        <p class="text-gray-600 text-m">This is my one node kubernetes server for hosting services. Due to limited hardware, it is not in use currently.</p>
+                        <img src="assets/kubernetes-homelab.png"
+                            class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Kubernetes
+                            Homelab</h5>
+                        <p class="text-gray-600 text-m">This is my one node kubernetes server for hosting services. Due
+                            to limited hardware, it is not in use currently.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/docker-homelab.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Docker Homelab</h5>
-                        <p class="text-gray-600 text-m">This is my currently running docker server where various services and applications are deployed.</p>
+                        <img src="assets/docker-homelab.png"
+                            class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Docker Homelab
+                        </h5>
+                        <p class="text-gray-600 text-m">This is my currently running docker server where various
+                            services and applications are deployed.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/instagram-clone.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Instagram Clone</h5>
+                        <img src="assets/instagram-clone.png"
+                            class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Instagram Clone
+                        </h5>
                         <p class="text-gray-600 text-m">This is a simple HTML, CSS clone of my personal instagram.</p>
                     </a>
 
                     <a href="#">
-                        <img src="assets/personal-intro.png" class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
-                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Personal Introduction</h5>
-                        <p class="text-gray-600 text-m">This is a simple HTML, CSS based personal introduction of mine.</p>
+                        <img src="assets/personal-intro.png"
+                            class="w-full aspect-video object-cover rounded-lg border hover:-translate-y-3 transition-transform duration-300">
+                        <h5 class="text-neutral-800 text-m tracking-widest my-3 font-semibold uppercase">Personal
+                            Introduction</h5>
+                        <p class="text-gray-600 text-m">This is a simple HTML, CSS based personal introduction of mine.
+                        </p>
                     </a>
                 </div>
             </div>
@@ -203,29 +254,37 @@
 
 
         <!-- Contact Section -->
-        <section class="bg-gray-100">
+        <section id="contact" class="bg-gray-100">
             <div class="my-container sections-pb">
                 <h3 class="text-4xl text-neutral-800">Contact Me</h3>
 
                 <form>
                     <div class="flex md:flex-row flex-col mt-7 gap-10">
-                        <input type="text" name="name" placeholder="Name" autocomplete="off" class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
-                        <input type="number" name="name" placeholder="Phone Number" class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm" >
+                        <input type="text" name="name" placeholder="Name" autocomplete="off"
+                            class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
+                        <input type="number" name="name" placeholder="Phone Number"
+                            class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
                     </div>
 
                     <div class="flex mt-7 md:flex-row flex-col gap-10">
 
-                        <input type="email" name="email" placeholder="Email" autocomplete="off" class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
-                        <input type="text" name="subject" placeholder="Subject" class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
+                        <input type="email" name="email" placeholder="Email" autocomplete="off"
+                            class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
+                        <input type="text" name="subject" placeholder="Subject"
+                            class="field flex-1 border-b-2 border-gray-500 py-3 placeholder-gray-500 text-sm">
                     </div>
 
                     <div class="mt-7">
-                        <textarea name="message" placeholder="Message" class="field resize-none w-full h-32 border-b-2 border-gray-500 placeholder-gray-500 text-sm"></textarea>
+                        <textarea name="message" placeholder="Message"
+                            class="field resize-none w-full h-32 border-b-2 border-gray-500 placeholder-gray-500 text-sm"></textarea>
                     </div>
 
                     <div class="mt-7 flex gap-4 justify-end">
-                        <button type="reset" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Reset</button>  
-                        <button type="submit" class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Send Message</button>  
+                        <button type="reset"
+                            class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Reset</button>
+                        <button type="submit"
+                            class="bg-yellow-400 text-sm text-neutral-800 p-3 tracking-widest hover:bg-yellow-500">Send
+                            Message</button>
                     </div>
                 </form>
             </div>
@@ -236,26 +295,22 @@
     <footer>
         <div class="flex items-center flex-col justify-center py-10 text-center">
             <ul class="flex gap-6">
-                <li class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10 hover:border-neutral-800 transition-all duration-300">
-                    <a href="#" class="text-neutral-800 text-xl">
-                        <i class="fa-brands fa-facebook"></i>
-                    </a>
-                </li>
-
-                <li class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10 hover:border-neutral-800 transition-all duration-300">
-                    <a href="#" class="text-neutral-800 text-xl">
+                <li
+                    class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10 hover:border-neutral-800 transition-all duration-300">
+                    <a href="https://github.com/pratikbhattarai76" target="_blank" rel="noreferrer" class="text-neutral-800 text-xl">
                         <i class="fa-brands fa-github"></i>
                     </a>
                 </li>
 
                 <li class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10 hover:border-neutral-800 transition-all duration-300">
-                    <a href="#" class="text-neutral-800 text-xl">
+                    <a href="www.linkedin.com/in/pratik-bhattarai-01896a255" target="_blank" rel="noreferrer" class="text-neutral-800 text-xl">
                         <i class="fa-brands fa-linkedin"></i>
                     </a>
                 </li>
 
-                <li class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10 hover:border-neutral-800 transition-all duration-300">
-                    <a href="#" class="text-neutral-800 text-xl">
+                <li
+                    class="h-10 w-10 border-2 border-gray-200 rounded-full leading-10 hover:border-neutral-800 transition-all duration-300">
+                    <a href="https://discord.com/users/760901197166018621" target="_blank" rel="noreferrer" class="text-neutral-800 text-xl">
                         <i class="fa-brands fa-discord"></i>
                     </a>
                 </li>
@@ -266,6 +321,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
